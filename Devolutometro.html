@@ -30,7 +30,7 @@
       transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       transform-style: preserve-3d;
     }
-    .devolutometro, .panel {
+    #devolutometro, #panel {
       position: absolute;
       width: 512px;
       height: 192px;
@@ -59,8 +59,8 @@
 </head>
 
 <body class="htmlNoPages">
-  <div class="devolutometro">
-    <img src="assets/bg.jpg" class="panel" id="bg">
+  <div id="devolutometro">
+    <img src="assets/bg.jpg" id="panel">
     <div class="number" id="n10"></div>
     <div class="number" id="n9"></div>
     <div class="number" id="n8"></div>
