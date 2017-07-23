@@ -2,9 +2,10 @@ $(function() {
     var numbers = {};
     var value = 0.0;
     var defaultIncrement = 9.05;
-    var mininumIncrement = 1.0287;
+    var maximumIncrement = defaultIncrement * 1.5;
+    var mininumIncrement = defaultIncrement * 0.2;
     var increment = 0;
-    var adjustInterval = 300000;
+    var adjustInterval = 60000;
 
     function setup(data) {
         value = parseFloat(data);
@@ -26,7 +27,7 @@ $(function() {
 
     function setIncrement(newValue) {
         increment = Math.max(mininumIncrement, newValue > 0
-            ? increment = newValue
+            ? Math.min(maximumIncrement, newValue)
             : Math.min(defaultIncrement, increment * 0.75));
         //console.log("increment: " + increment);
     }
