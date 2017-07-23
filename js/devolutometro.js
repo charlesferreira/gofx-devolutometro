@@ -1,12 +1,20 @@
 $(function() {
     var numbers = {};
+    var value = 0.0;
+    var defaultIncrement = 9.05;
+    var mininumIncrement = 1.0287;
+    var increment = 0;
+    var adjustInterval = 300000;
 
-    function setupPanel() {
+    function setup(data) {
+        value = parseFloat(data);
+        setIncrement(defaultIncrement);
         for (var i = 0; i<= 10; i++)
             numbers[i] = $('#n' + i);
     }
 
-    function updatePanel(value) {
+    function update() {
+        value += increment;
         var digits = value.toFixed(2).replace(/\D/g, '');
         for (var i in numbers) {
             var digit = parseInt(digits[digits.length - 1 - i]);
@@ -16,13 +24,33 @@ $(function() {
         }
     }
 
-    $.get('start.php').then(function(data) {
-        setupPanel();
+    function setIncrement(newValue) {
+        increment = Math.max(mininumIncrement, newValue > 0
+            ? increment = newValue
+            : Math.min(defaultIncrement, increment * 0.75));
+        //console.log("increment: " + increment);
+    }
 
-        var value = parseFloat(data);
-        setInterval(function() {
-            value += 9.05;
-            updatePanel(value);
-        }, 1000);
-    });
+    function adjust() {
+        $.get('get-current-value.php').then(function(data, status) {
+            if (status != 'success' || data <= 0) {
+                setIncrement(defaultIncrement);
+                return;
+            }
+            var newValue = parseFloat(data);
+            var deltaValue = newValue - value;
+            setIncrement(increment + 2000 * deltaValue / adjustInterval);
+        });
+    }
+
+    (function start() {
+        $.get('get-current-value.php').then(function(data, status) {
+            if (status != 'success' || data <= 0)
+                return setTimeout(start, 5000);
+
+            setup(data);
+            setInterval(update, 1000);
+            setInterval(adjust, adjustInterval);
+        });
+    })();
 });
