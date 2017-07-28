@@ -1,6 +1,7 @@
 $(function() {
+    var version;
     var numbers = {};
-    var virgula;
+    var comma;
     var currentValue;
     var defaultIncrement;
     var maximumIncrement = function() { return defaultIncrement * 1.5 };
@@ -10,12 +11,13 @@ $(function() {
     var numDigits = 12;
 
     function setup(data) {
+        version = data.version;
         currentValue = parseFloat(data.value);
         defaultIncrement = parseFloat(data.increment);
         setIncrement(defaultIncrement);
         for (var i = 0; i<= numDigits; i++)
             numbers[i] = $('#n' + i);
-        virgula = $('#virgula');
+        comma = $('#virgula');
     }
 
     function update() {
@@ -29,7 +31,7 @@ $(function() {
             })
         }
 
-        virgula.css({ display: currentValue > 1000000000 ? 'block' : 'none' });
+        comma.css({ display: currentValue > 1000000000 ? 'block' : 'none' });
     }
 
     function setIncrement(newValue) {
@@ -41,7 +43,11 @@ $(function() {
     }
 
     function adjust() {
-        $.get('get-current-value.php').then(function(data, status) {
+        $.get('get-current-data.php').then(function(data, status) {
+            if (data.version != version) {
+                window.location.href = window.location.href;
+                return;
+            }
             if (status != 'success' || data.value <= 0 || data.increment <= 0) {
                 setIncrement(defaultIncrement);
                 return;
@@ -54,10 +60,9 @@ $(function() {
     }
 
     (function start() {
-        $.get('get-current-value.php').then(function(data, status) {
+        $.get('get-current-data.php').then(function(data, status) {
             if (status != 'success' || data.value <= 0 || data.increment <= 0)
                 return setTimeout(start, 5000);
-
             setup(data);
             setInterval(update, 1000);
             setInterval(adjust, adjustInterval);
