@@ -23,6 +23,25 @@
       top: 0px;
       left: 0px;
     }
+    #panel {
+      background: url("assets/bg.jpg");
+    }
+    .lowlight #panel {
+      background: url("assets/lowlight/bg.jpg");
+    }
+    #virgula {
+      background: url("assets/virgula.jpg");
+      display: block;
+      height: 14px;
+      left: 74px;
+      position: absolute;
+      top: 165px;
+      width: 8px;
+    }
+    .lowlight #virgula {
+      background: url("assets/lowlight/virgula.jpg");
+      left: 82px;
+    }
     .number {
       background: url("assets/numeros.png");
       position: absolute;
@@ -30,23 +49,45 @@
       height: 50px;
       top: 129px;
     }
+    .lowlight .number {
+      background: url("assets/lowlight/numeros.png");
+      top: 130px;
+    }
     #n12 {
       left: 3px;
+    }
+    .lowlight #n12 {
+      left: 13px;
     }
     #n11 {
       left: 38px;
     }
+    .lowlight #n11 {
+      left: 47px;
+    }
     #n10 {
       left: 87px;
+    }
+    .lowlight #n10 {
+      left: 94px;
     }
     #n9 {
       left: 122px;
     }
+    .lowlight #n9 {
+      left: 127px;
+    }
     #n8 {
       left: 157px;
     }
+    .lowlight #n8 {
+      left: 160px;
+    }
     #n7 {
       left: 206px;
+    }
+    .lowlight #n7 {
+      left: 207px;
     }
     #n6 {
       left: 241px;
@@ -57,46 +98,54 @@
     #n4 {
       left: 325px;
     }
+    .lowlight #n4 {
+      left: 322px;
+    }
     #n3 {
       left: 360px;
+    }
+    .lowlight #n3 {
+      left: 356px;
     }
     #n2 {
       left: 395px;
     }
+    .lowlight #n2 {
+      left: 390px;
+    }
     #n1 {
       left: 444px;
+    }
+    .lowlight #n1 {
+      left: 437px;
     }
     #n0 {
       left: 479px;
     }
-    .gwd-img-n78i {
-      display: block;
-      height: 13.9977px;
-      left: 74px;
-      position: absolute;
-      top: 165px;
-      width: 7.99569px;
+    .lowlight #n0 {
+      left: 471px;
     }
   </style>
 </head>
 
 <body class="htmlNoPages">
   <div id="devolutometro">
-    <img src="assets/bg.jpg" id="panel">
-    <div class="number" id="n12"></div>
-    <div class="number" id="n11"></div>
-    <div class="number" id="n10"></div>
-    <div class="number" id="n9"></div>
-    <div class="number" id="n8"></div>
-    <div class="number" id="n7"></div>
-    <div class="number" id="n6"></div>
-    <div class="number" id="n5"></div>
-    <div class="number" id="n4"></div>
-    <div class="number" id="n3"></div>
-    <div class="number" id="n2"></div>
-    <div class="number" id="n1"></div>
-    <div class="number" id="n0"></div>
-    <img src="assets/virgula.jpg" class="gwd-img-n78i" id="virgula">
+    <div id="panel">
+      <div class="number" id="n12"></div>
+      <div class="number" id="n11"></div>
+      <div class="number" id="n10"></div>
+      <div class="number" id="n9"></div>
+      <div class="number" id="n8"></div>
+      <div class="number" id="n7"></div>
+      <div class="number" id="n6"></div>
+      <div class="number" id="n5"></div>
+      <div class="number" id="n4"></div>
+      <div class="number" id="n3"></div>
+      <div class="number" id="n2"></div>
+      <div class="number" id="n1"></div>
+      <div class="number" id="n0"></div>
+      <div id="virgula"></div>
+    </div>
   </div>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/devolutometro.js"></script>

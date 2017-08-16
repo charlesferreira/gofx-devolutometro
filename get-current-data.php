@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-$version = 2;
+$version = 7;
 $value = 0;
 $increment = 9.05;
 if ($content = @file_get_contents('http://www.notaparana.pr.gov.br/')) {

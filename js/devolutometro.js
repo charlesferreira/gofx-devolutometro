@@ -2,6 +2,9 @@ $(function() {
     var version;
     var numbers = {};
     var comma;
+    var devolutometro;
+    var lowlightStart = {h: 20, m: 00};
+    var lowlightStop = {h: 06, m: 00};
     var currentValue;
     var defaultIncrement;
     var adjustInterval = 300000;
@@ -14,6 +17,7 @@ $(function() {
         for (var i = 0; i<= numDigits; i++)
             numbers[i] = $('#n' + i);
         comma = $('#virgula');
+        devolutometro = $('#devolutometro');
     }
 
     function update() {
@@ -28,6 +32,22 @@ $(function() {
         }
 
         comma.css({ display: currentValue > 1000000000 ? 'block' : 'none' });
+        updateLowLight();
+    }
+
+    function updateLowLight() {
+        var d = new Date();
+        var now = minutes(d.getHours(), d.getMinutes());
+        var start = minutes(lowlightStart.h, lowlightStart.m);
+        var stop = minutes(lowlightStop.h, lowlightStop.m);
+        var lowlight = stop > start
+            ? (now >= start && now < stop)
+            : (now >= start || now < stop);
+        devolutometro.toggleClass('lowlight', lowlight);
+    }
+
+    function minutes(h, m) {
+        return h * 60 + m;
     }
 
     function adjust() {
@@ -51,7 +71,7 @@ $(function() {
             if (status != 'success' || data.value <= 0 || data.increment <= 0)
                 return setTimeout(start, 5000);
             setup(data);
-            setInterval(update, 1020);
+            setInterval(update, 1010);
             setInterval(adjust, adjustInterval);
         });
     })();
