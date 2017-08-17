@@ -3,7 +3,7 @@ $(function() {
     var numbers = {};
     var comma;
     var devolutometro;
-    var lowlightStart = {h: 20, m: 00};
+    var lowlightStart = {h: 00, m: 00};
     var lowlightStop = {h: 06, m: 00};
     var currentValue;
     var defaultIncrement;
