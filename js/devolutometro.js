@@ -9,6 +9,7 @@ $(function() {
     var defaultIncrement;
     var adjustInterval = 300000;
     var numDigits = 12;
+    var previousHour = 99;
 
     function setup(data) {
         version = data.version;
@@ -33,6 +34,15 @@ $(function() {
 
         comma.css({ display: currentValue > 1000000000 ? 'block' : 'none' });
         updateLowLight();
+        updateAutoRefresh();
+    }
+
+    function updateAutoRefresh() {
+        var now = new Date().getHours();
+        if (previousHour < now && (now == 6 || now == 16))
+            return refresh();
+
+        previousHour = now;
     }
 
     function updateLowLight() {
@@ -53,8 +63,7 @@ $(function() {
     function adjust() {
         $.get('get-current-data.php').then(function(data, status) {
             if (data.version != version) {
-                window.location.href = window.location.href;
-                return;
+                return refresh();
             }
             if (status != 'success' || data.value <= 0 || data.increment <= 0) {
                 return;
@@ -66,7 +75,13 @@ $(function() {
         });
     }
 
+    function refresh() {
+        window.location.href = window.location.href;
+    }
+
     (function start() {
+        console.log(new Date());
+
         $.get('get-current-data.php').then(function(data, status) {
             if (status != 'success' || data.value <= 0 || data.increment <= 0)
                 return setTimeout(start, 5000);
