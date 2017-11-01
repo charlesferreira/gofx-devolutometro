@@ -125,6 +125,17 @@
     .lowlight #n0 {
       left: 471px;
     }
+    .gwd-video-4xey {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 512px;
+      height: 192px;
+      transform-origin: 256px 96px 0px;
+    }
+    video::-webkit-media-controls {
+  display: none;
+}
   </style>
 </head>
 
@@ -149,6 +160,7 @@
   </div>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/devolutometro.js"></script>
+  <video src="assets/video.mp4" class="gwd-video-4xey" id="video" autoplay="autoplay"></video>
 </body>
 
 </html>

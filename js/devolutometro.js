@@ -1,3 +1,4 @@
+
 $(function() {
     var version;
     var numbers = {};
@@ -7,9 +8,12 @@ $(function() {
     var lowlightStop = {h: 06, m: 00};
     var currentValue;
     var defaultIncrement;
-    var adjustInterval = 300000;
+    var adjustInterval = 300000;        // 300000 = 5 minutos
     var numDigits = 12;
     var previousHour = 99;
+    var video;
+    var videoPlayAtStart = false;
+    var videoTimerInterval = 600000;    // 600000 = 10 minutos
 
     function setup(data) {
         version = data.version;
@@ -19,6 +23,28 @@ $(function() {
             numbers[i] = $('#n' + i);
         comma = $('#virgula');
         devolutometro = $('#devolutometro');
+        video = $('#video');
+        startVideoTimer();
+    }
+
+    function startVideoTimer() {
+        video[0].pause();
+        video.hide();
+
+        function hide() {
+            devolutometro.show();
+            video.hide();
+            setTimeout(play, videoTimerInterval);
+        }
+        function play() {
+            devolutometro.hide();
+            video.show();
+            video[0].play();
+
+            video.on('ended', hide);
+        }
+
+        videoPlayAtStart ? play() : hide();
     }
 
     function update() {
