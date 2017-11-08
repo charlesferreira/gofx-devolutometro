@@ -12,8 +12,8 @@ $(function() {
     var numDigits = 12;
     var previousHour = 99;
     var video;
-    var videoPlayAtStart = false;
-    var videoTimerInterval = 600000;    // 600000 = 10 minutos
+    var videoPlayAtStart = true;
+    var videoTimerInterval = 120000;    // 120000 = 2 minutos
 
     function setup(data) {
         version = data.version;
@@ -23,14 +23,16 @@ $(function() {
             numbers[i] = $('#n' + i);
         comma = $('#virgula');
         devolutometro = $('#devolutometro');
-        video = $('#video');
         startVideoTimer();
     }
 
-    function startVideoTimer() {
+    function setupVideo() {
+        video = $('#video');
         video[0].pause();
         video.hide();
+    }
 
+    function startVideoTimer() {
         function hide() {
             devolutometro.show();
             video.hide();
@@ -106,7 +108,7 @@ $(function() {
     }
 
     (function start() {
-        console.log(new Date());
+        setupVideo();
 
         $.get('get-current-data.php').then(function(data, status) {
             if (status != 'success' || data.value <= 0 || data.increment <= 0)
