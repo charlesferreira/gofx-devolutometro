@@ -1,4 +1,3 @@
-
 $(function() {
     var version;
     var numbers = {};
@@ -23,21 +22,19 @@ $(function() {
             numbers[i] = $('#n' + i);
         comma = $('#virgula');
         devolutometro = $('#devolutometro');
-        startVideoTimer();
+        setupVideo();
     }
 
     function setupVideo() {
         video = $('#video');
-        video[0].pause();
         video.hide();
-    }
 
-    function startVideoTimer() {
         function hide() {
             devolutometro.show();
             video.hide();
             setTimeout(play, videoTimerInterval);
         }
+
         function play() {
             devolutometro.hide();
             video.show();
@@ -46,7 +43,18 @@ $(function() {
             video.on('ended', hide);
         }
 
-        videoPlayAtStart ? play() : hide();
+        var req = new XMLHttpRequest();
+        req.open('GET', 'video.mp4', true);
+        req.responseType = 'blob';
+        req.onload = function() {
+            if (this.status === 200) {
+                var videoBlob = this.response;
+                video[0].src = URL.createObjectURL(videoBlob);
+
+                videoPlayAtStart ? play() : hide();
+            }
+        }
+        req.send();
     }
 
     function update() {
@@ -108,8 +116,6 @@ $(function() {
     }
 
     (function start() {
-        setupVideo();
-
         $.get('get-current-data.php').then(function(data, status) {
             if (status != 'success' || data.value <= 0 || data.increment <= 0)
                 return setTimeout(start, 5000);

@@ -25,8 +25,8 @@
       <file leaf-file-name="devolutometro.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/devolutometro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44485635">
-              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.55514365">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -84,6 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -102,44 +103,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devolutometro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devolutometro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devolutometro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devolutometro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
@@ -160,7 +132,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -198,6 +170,14 @@
     <entry file="file://$PROJECT_DIR$/js/devolutometro.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/devolutometro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
@@ -229,15 +209,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Devolutometro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91102874">
-          <caret line="168" column="7" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.73308617">
+          <caret line="162" column="9" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
+          <folding>
+            <marker date="1510348551951" expanded="true" signature="21:3550" placeholder="..." />
+            <marker date="1510348551951" expanded="true" signature="29:2447" placeholder="..." />
+            <marker date="1510348551951" expanded="true" signature="178:2439" placeholder="..." />
+            <marker date="1510348551951" expanded="true" signature="195:260" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="270:445" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="473:580" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="592:639" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="661:717" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="731:905" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="929:1008" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1021:1156" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1179:1258" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1268:1292" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1312:1337" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1347:1372" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1392:1417" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1427:1452" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1472:1497" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1506:1532" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1551:1577" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1586:1612" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1631:1657" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1666:1692" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1711:1737" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1746:1772" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1781:1807" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1816:1842" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1861:1887" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1896:1922" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1941:1967" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="1976:2002" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2021:2047" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2056:2082" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2101:2127" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2136:2162" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2181:2207" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2219:2366" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2401:2429" placeholder="{...}" />
+            <marker date="1510348551951" expanded="true" signature="2475:3541" placeholder="..." />
+            <marker date="1510348551951" expanded="true" signature="2502:3409" placeholder="..." />
+            <marker date="1510348551951" expanded="true" signature="2523:3400" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2567:2581" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2632:2646" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2697:2711" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2761:2775" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2825:2839" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2889:2903" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="2953:2967" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3017:3031" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3081:3095" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3145:3159" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3209:3223" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3273:3287" placeholder="..." />
+            <marker date="1510348551951" expanded="false" signature="3337:3351" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/devolutometro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44485635">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.55514365">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding />
         </state>
       </provider>
